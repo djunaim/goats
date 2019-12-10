@@ -7,6 +7,7 @@ import GoatCoral from '../components/GoatCoral/GoatCoral';
 
 // classes have more abilities than regular functions, which only does 1 single action
 // state lives in App.js; only have 1 state. Other compoenents haave props (take from state and given to child components)
+// render is our printToDOM
 class App extends React.Component {
   state = {
     goats: [],
