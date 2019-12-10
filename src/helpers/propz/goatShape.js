@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+// prop types gives structure to what object should look like
 const goatShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

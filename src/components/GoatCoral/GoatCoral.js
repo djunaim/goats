@@ -7,12 +7,14 @@ import goatShape from '../../helpers/propz/goatShape';
 class GoatCoral extends React.Component {
   static propTypes = {
     goats: PropTypes.arrayOf(goatShape.goatShape),
+    freeGoat: PropTypes.func,
   }
 
   render() {
     const myGoats = this.props.goats;
+    const { freeGoat } = this.props;
     // map loops over array and returns our results right away
-    const goatCards = myGoats.map((goat) => <Goat key={goat.id} goat={goat}/>);
+    const goatCards = myGoats.map((goat) => <Goat key={goat.id} goat={goat} freeGoat={freeGoat}/>);
     return (
       <div className="goatCoral">
         {goatCards}
