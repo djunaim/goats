@@ -4,6 +4,7 @@ import './App.scss';
 import goatData from '../helpers/data/goatData';
 
 import GoatCoral from '../components/GoatCoral/GoatCoral';
+import AvailableGoat from '../components/AvailableGoats/AvailableGoats';
 
 // classes have more abilities than regular functions, which only does 1 single action
 // state lives in App.js; only have 1 state. Other compoenents haave props (take from state and given to child components)
@@ -35,6 +36,7 @@ class App extends React.Component {
     return (
     <div className="App">
         <button className="btn btn-danger">Sucks</button>
+        <AvailableGoat goats={this.state.goats}/>
         <GoatCoral goats={this.state.goats} freeGoat={this.freeGoat} useGoat={this.useGoat} />
     </div>
     );
